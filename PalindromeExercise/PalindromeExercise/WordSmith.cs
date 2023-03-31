@@ -8,15 +8,16 @@ namespace PalindromeExercise
 {
     public class WordSmith
     {
-        public WordSmith()
+        public static void Start()
         {
 
-            //Console.WriteLine("What is your name?");
-            //string name = Console.ReadLine();
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
 
-            //if (IsAPalindrome(name) == true) { Console.WriteLine($"{name}is a Palindrome!"); } else { Console.WriteLine($"{name} is not a palindrome."); }
+            if (IsAPalindrome(name) == true) { Console.WriteLine($"{name}is a Palindrome!"); } else { Console.WriteLine($"{name} is not a palindrome."); }
         }
-        public bool IsAPalindrome(string nameHolder)
+
+        public static bool IsAPalindrome(string nameHolder)
         {
             string nameForward, nameBackward;
             nameForward = nameHolder.ToLower();
@@ -27,8 +28,5 @@ namespace PalindromeExercise
           return nameForward==nameBackward ? true : false;
                 
         }
-
-
-
     }
 }
